@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RAFAFOOD — Good food. Anywhere.</title>
+<meta name="description" content="RAFAFOOD — commandez vos plats préférés en livraison ou à emporter.">
+<link rel="icon" href="./img/logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#top"><span class="brand-mark"><img src="./img/logo.png" alt="Logo RAFAFOOD"></span><span>RAFA<span>FOOD</span></span></a>
+  <nav class="main-nav"><a href="#top">Accueil</a><a href="#menu">La carte</a><a href="#menus">Nos menus</a><a href="#concept">Notre concept</a></nav>
+  <div class="head-actions"><a class="nav-cta" href="#menu">Voir la carte</a><button class="cart-btn" id="cartBtn" type="button">🛒 Panier <b id="cartCount">0</b></button><button class="account-btn" id="accountBtn" type="button"><span class="account-avatar">👤</span><span><b id="accountLabel">Connexion</b><small id="accountRole"></small></span></button><a id="adminNav" class="admin-nav" href="#admin">Admin</a></div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">🍴 DARK KITCHEN • LIVRAISON • À EMPORTER</div>
+    <h1>Le goût de la<br><em>liberté.</em></h1>
+    <p>Une carte courte, généreuse et travaillée : nos signatures, nos menus, nos boissons et nos desserts réunis dans un seul univers.</p>
+    <div class="hero-actions"><a class="btn primary" href="#menu">Découvrir la carte</a><a class="btn ghost" href="#enseignes">Découvrir nos univers</a></div>
+    <div class="trust"><span>🌱 4 créations vegan</span><span>✨ Produits sélectionnés</span><span>🔐 Cryptex ou paiement à réception</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="orbit o1"></div><div class="orbit o2"></div>
+    <div class="food-card fc-main"><span>🍔</span><div><small>LE RAFA BURGER</small><strong>Rafa Signature</strong><b>12,90 €</b></div></div>
+    <div class="floating-card fc-one">🍕 <b>RafaPizza</b><small>À partir de 13,90 €</small></div>
+    <div class="floating-card fc-two">🍔 <b>Le Rafa Burger</b><small>Généreux & gourmand</small></div>
+  </div>
+</section>
+
+<section class="service-strip"><div><span>🛵</span><b>Livraison</b><small>chez vous, sans attendre</small></div><div><span>🥡</span><b>À emporter</b><small>prêt quand vous arrivez</small></div><div><span>🔐</span><b>Paiement au choix</b><small>Cryptex ou à réception</small></div><div><span>🎁</span><b>Fidélité</b><small>des avantages à chaque commande</small></div></section>
+
+<section id="enseignes" class="section"><div class="section-head"><div><span class="eyebrow">LES UNIVERS RAFAFOOD</span><h2>Une envie ? <em>On l'a.</em></h2></div><p>Plusieurs cuisines, une seule commande.</p></div>
+<div class="brand-grid">
+  <button class="brand-card bowl" data-category="Bowls"><span class="brand-icon">🥗</span><strong>Rafa<span>Bowl</span></strong><small>Frais • sain • gourmand</small></button>
+  <button class="brand-card burger" data-category="Burgers"><span class="brand-icon">🍔</span><strong>Le Rafa <span>Burger</span></strong><small>Burgers • frites</small></button>
+  <button class="brand-card pizza" data-category="Pizzas"><span class="brand-icon">🍕</span><strong>Rafa<span>Pizza</span></strong><small>Pizzas • pâtes • saveurs</small></button>
+    <button class="brand-card grill" data-category="Grill"><span class="brand-icon">🔥</span><strong>Rafa<span>Grill</span></strong><small>Viandes • grillades • saveurs</small></button>
+  <button class="brand-card pasta" data-category="Pâtes"><span class="brand-icon">🍝</span><strong>Rafa <span>Pâtes</span></strong><small>Des pâtes, du goût, du bonheur</small></button>
+</div></section>
+
+<section id="menu" class="section menu-section"><div class="section-head"><div><span class="eyebrow">LA CARTE</span><h2>Nos incontournables.<br><em>Choisis ton envie.</em></h2></div></div>
+<div class="menu-tools"><label class="menu-search"><span>⌕</span><input id="productSearch" type="search" placeholder="Rechercher un plat, une envie…" aria-label="Rechercher dans la carte"></label><button id="favoritesFilter" class="favorite-filter" type="button" aria-pressed="false">♡ Mes favoris <b id="favoriteCount">0</b></button></div>
+<div class="filters" id="filters"><button class="active" data-filter="Tous">Tout</button><button data-filter="Menus">Menus</button><button data-filter="Plats">Plats</button><button data-filter="Burgers">Burgers</button><button data-filter="Pizzas">Pizzas</button><button data-filter="Bowls">Bowls</button><button data-filter="Grill">Grill</button><button data-filter="Pâtes">Pâtes</button><button data-filter="Boissons">Boissons</button><button data-filter="Desserts">Desserts</button><button data-filter="Vegan">🌱 Vegan</button><button data-filter="Étudiant">🎓 Étudiant</button></div>
+<div class="product-grid" id="productGrid"></div></section>
+
+<section id="menus" class="section menu-highlight"><div class="section-head"><div><span class="eyebrow">FORMULES</span><h2>Nos menus<br><em>pour ne manquer de rien.</em></h2></div><p>Un plat, un accompagnement et une boisson : simple et efficace.</p></div><div class="menu-note"><span>👑</span><div><strong>Le Menu Rafa</strong><p>Choisis ton plat parmi les signatures, ajoute des frites classiques ou frites de patate douce et une boisson 33 cl.</p></div><b>À partir de 17,90 €</b></div>
+<div class="menu-note student-note"><span>🎓</span><div><strong>Menu Étudiant</strong><p>Un plat + frites classiques ou frites de patate douce + boisson 33 cl. Tarif étudiant sur présentation d’un justificatif lors de l’achat.</p></div><b>12,90 €</b></div>
+<div class="menu-note vegan-note"><span>🌱</span><div><strong>Menu Étudiant Vegan</strong><p>Une création vegan + accompagnement + boisson 33 cl, sur présentation d’un justificatif étudiant lors de l’achat.</p></div><b>13,90 €</b></div></section>
+
+<section id="concept" class="concept"><div class="concept-inner"><div><span class="eyebrow">L'ESPRIT RAFAFOOD</span><h2>Une carte courte,<br><em>une vraie identité.</em></h2><p>Nous préférons proposer moins de références et mieux les travailler. Chaque plat possède sa personnalité, chaque menu est pensé pour être simple, généreux et reconnaissable.</p><div class="concept-points"><span>✓ 21 références</span><span>✓ Gamme vegan</span><span>✓ Menu étudiant</span><span>✓ Boissons & desserts</span></div></div><div class="concept-stat"><strong>21</strong><span>références</span><strong>5</strong><span>univers</span></div></div></section>
+
+
+</main>
+
+<footer><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark"><img src="./img/logo.png" alt="Logo RAFAFOOD"></span><span>RAFA<span>FOOD</span></span></a><p>Good food. Anywhere.</p></div><div><b>RAFAFOOD</b><a href="#enseignes">Nos enseignes</a><a href="#menu">La carte</a><a href="#concept">Notre concept</a></div><div><b>Aide</b><a href="#">Livraison</a><a href="#">Allergènes</a><a href="#">Contact</a></div><div><b>Paiement</b><span>🔐 Cryptex Bank</span><span>💶 Paiement à réception</span></div><div class="footer-bottom"><span>© <span id="footerYear">2026</span> RAFAFOOD · Une société de <b>Rafael Compagny</b></span><nav aria-label="Informations légales"><a href="./partenaires.html">Partenaires</a><a href="./mentions.html">Mentions légales</a><a href="./confidentialite.html">Confidentialité</a></nav></div></footer>
+
+<div class="modal" id="authModal"><div class="modal-box auth-box"><button class="modal-close" id="authClose">×</button><div class="auth-brand"><img src="./img/logo.png" alt="Logo RAFAFOOD"><span>RAFA<span>FOOD</span></span></div><h2 id="authTitle">Connexion</h2><p class="auth-sub">Accède à ton espace RAFAFOOD.</p><div id="authError" class="form-error"></div><form id="loginForm"><label>E-mail<input required type="email" name="email" autocomplete="email"></label><label>Mot de passe<input required type="password" name="password" autocomplete="current-password"></label><button class="btn primary full" type="submit">Se connecter</button><button class="switch-auth" id="switchRegister" type="button">Créer un compte</button></form><form id="registerForm" class="hidden"><div class="form-grid"><label>Prénom<input required name="firstName" autocomplete="given-name"></label><label>Nom<input required name="lastName" autocomplete="family-name"></label></div><label>E-mail<input required type="email" name="email" autocomplete="email"></label><label>Mot de passe<input required minlength="6" type="password" name="password" autocomplete="new-password"></label><button class="btn primary full" type="submit">Créer mon compte</button><button class="switch-auth" id="switchLogin" type="button">J’ai déjà un compte</button></form></div></div>
+<div class="modal" id="accountModal"><div class="modal-box account-box profile-box"><button class="modal-close" id="accountClose">×</button><div class="profile-head"><div><span class="eyebrow">MON ESPACE</span><h2 id="accountName">Mon compte</h2><p id="accountEmail" class="muted"></p></div><button id="logoutBtn" class="btn danger" type="button">↪ Déconnexion</button></div><div class="profile-section"><div class="profile-section-title"><h3>Mes informations</h3><span id="accountRoleText" class="profile-role">Client</span></div><div class="profile-info-grid"><div><small>Prénom</small><b id="profileFirstName">—</b></div><div><small>Nom</small><b id="profileLastName">—</b></div><div class="wide"><small>E-mail</small><b id="profileEmail">—</b></div></div></div><div id="employeeDiscount" class="benefit-card hidden">🎁 <div><b>-20 % employé</b><small>La remise est automatiquement appliquée aux prix affichés sur le site.</small></div></div><div class="profile-section"><div class="profile-section-title"><h3>Mes commandes</h3><span class="muted">Historique</span></div><div id="ordersList" class="orders-list"></div></div><button id="openAdminBtn" class="btn primary full hidden" type="button">Ouvrir l’espace de gestion</button></div></div>
+<div class="modal" id="adminModal"><div class="modal-box admin-box"><button class="modal-close" id="adminClose">×</button><div class="admin-header"><div><span class="eyebrow">ADMINISTRATION</span><h2>Gestion de la carte</h2><p class="muted">Ajoute, modifie ou retire les produits visibles sur RAFAFOOD.</p></div><button id="addProductBtn" class="btn primary" type="button">+ Ajouter</button></div><div id="adminEditor"></div><div class="admin-products"><h3>Produits</h3><div id="adminProducts"></div></div><div class="staff-section"><h3>Comptes & rôles</h3><p class="muted">Seul un administrateur peut modifier les rôles.</p><div id="staffList"></div></div></div></div>
+<div class="modal" id="modal"><div class="modal-box"><button class="modal-close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<div class="overlay" id="cartOverlay"></div>
+<aside class="cart" id="cartPanel">
+  <div class="cart-head"><h2>Mon panier</h2><button id="cartClose" type="button">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-bottom">
+    <div class="mode"><button class="mode-btn active" data-mode="livraison" type="button">🛵 Livraison</button><button class="mode-btn" data-mode="emporter" type="button">🥡 À emporter</button></div>
+    <div id="deliveryFields"><label class="cart-label">Adresse de livraison<input id="deliveryAddress" placeholder="12 rue de Bordeaux, 33000 Bordeaux"></label></div>
+    <div class="total"><span>Total</span><strong id="cartTotal">0,00 €</strong></div>
+    <button class="btn primary checkout" id="checkoutBtn" type="button">Commander</button>
+    <small class="secure">🔒 Commande enregistrée de façon sécurisée</small>
+  </div>
+</aside>
+
+<div class="modal" id="dashboardModal"><div class="modal-box dashboard-box"><button class="modal-close" id="dashboardClose">×</button><div class="dashboard-head"><div><span class="eyebrow">ESPACE RAFAFOOD</span><h2 id="dashboardTitle">Tableau de bord</h2><p id="dashboardSubtitle" class="muted"></p></div><div class="dashboard-head-actions"><span id="dashboardRole" class="profile-role"></span><button id="dashboardLogout" class="btn danger" type="button">↪ Déconnexion</button></div></div><div class="dashboard-tabs" id="dashboardTabs"></div><div id="dashboardContent"></div></div></div>
+
+<div class="modal" id="checkoutModal"><div class="modal-box checkout-box"><button class="modal-close" id="checkoutClose">×</button><span class="eyebrow">FINALISER LA COMMANDE</span><h2>Confirmer ma commande</h2><div id="checkoutSummary"></div><div class="form-grid"><label>Prénom<input id="checkoutFirstName"></label><label>Nom<input id="checkoutLastName"></label></div><label>Commentaire / précision<input id="checkoutNote" placeholder="Sans oignons, code portail…"></label><p id="orderPaymentInfo" class="muted payment-note"></p><div class="payment-box"><label class="payment-option"><input type="radio" name="paymentChoice" value="cryptex" checked><span><b>Payer avec Cryptex Bank</b><small>Autorise le paiement depuis Cryptex → Achats.</small></span></label><label class="payment-option"><input type="radio" name="paymentChoice" value="later"><span><b>Régler à réception</b><small id="payLaterLabel">À la livraison ou au retrait.</small></span></label><div id="cryptexPaymentFields"><label>E-mail de ton compte Cryptex Bank<input id="cryptexPayerEmail" type="email" autocomplete="email" placeholder="nom@exemple.fr"></label></div><div id="cryptexWaiting" class="cryptex-waiting hidden"><b>Demande envoyée à Cryptex Bank</b><p>Ouvre Cryptex Bank → Achats, puis autorise la demande correspondant à <span id="cryptexRequestRef"></span>. Cette page vérifiera le règlement automatiquement.</p><button class="mini-action" id="checkCryptexNowBtn" type="button">Vérifier le paiement</button></div></div><button class="btn primary full" id="confirmOrderBtn" type="button">Payer et confirmer</button><p id="checkoutError" class="form-error"></p></div></div>
+
+<script type="module" src="./app.js"></script>
+</body></html>

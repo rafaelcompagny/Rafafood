@@ -1,0 +1,16 @@
+node_modules/
+**/node_modules/
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+serviceAccount*.json
+*service-account*.json
+.vscode/
+.sync-*/
+.inspect-*/
+Novara-Esports/
